@@ -1,4 +1,4 @@
-# appleui
+# Apple Ui Design
 
 A new Flutter project.
 
