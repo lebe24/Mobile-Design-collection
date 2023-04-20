@@ -1,6 +1,6 @@
 ## Flutter Moblie Design Collection
 
-A collection of Flutter Mobile ui and Animations Kits.
+A collection of Flutter Mobile UI and Animations Kits.
 
 🛠 <b>Tech Stack</b>
 
@@ -13,4 +13,3 @@ A collection of Flutter Mobile ui and Animations Kits.
 ![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)&nbsp;
 
 ---
-make
