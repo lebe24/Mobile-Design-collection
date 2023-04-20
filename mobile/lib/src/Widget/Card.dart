@@ -6,7 +6,7 @@ import 'package:mobile/src/utils/extension.dart';
 import 'package:mobile/src/utils/constant.dart';
 
 class CardBox extends StatelessWidget {
-  CardBox(
+   CardBox(
       {super.key,
       required this.size,
       required this.image,
@@ -162,7 +162,7 @@ Widget contentBox(double size) {
             padding: const EdgeInsets.only(top: 12.0),
             child: const ListTile(
               title: Text(
-                'John Doe',
+                'TORONTO, CANADA',
                 style: TextStyle(
                   fontFamily: 'SF Pro Text',
                   fontWeight: FontWeight.w700,
@@ -194,9 +194,9 @@ Widget contentBox(double size) {
                   ),
                 ),
                 subtitle: Row(
-                  children: [
+                  children: const [
                     Icon(
-                      Icons.star,
+                      Icons.map_sharp,
                       size: 14,
                       color: Color(0xFF37F4FA),
                     ),
@@ -243,7 +243,7 @@ Widget contentBox(double size) {
                 ),
                 subtitle: Row(
                   children: [
-                    Icon(Icons.info),
+                    Icon(Icons.calendar_month),
                     SizedBox(width: 5),
                     Text('Subtitle'),
                   ],
