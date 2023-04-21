@@ -106,3 +106,93 @@ Widget contentBox(double size) {
         ),
       ));
 }
+
+class CustomBottomNavigation extends StatefulWidget {
+  const CustomBottomNavigation({Key? key}) : super(key: key);
+
+  @override
+  _CustomBottomNavigationState createState() => _CustomBottomNavigationState();
+}
+
+class _CustomBottomNavigationState extends State<CustomBottomNavigation> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = [
+    Container(),
+    Container(),
+    Container(),
+  ];
+
+  final List<String> _labels = [
+    'Page 1',
+    'Page 2',
+    'Page 3',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: (int index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.grey[900],
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.grey,
+        items: List.generate(
+          _labels.length,
+          (int index) => BottomNavigationBarItem(
+            icon: Icon(Icons.star),
+            label: _labels[index],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+  
+// bottomNavigationBar: Container(
+//         height: 70,
+//         child: ClipRRect(
+//           borderRadius: BorderRadius.only(
+//               topLeft: Radius.circular(40),
+//               topRight: Radius.circular(40)),
+//           child: BottomNavigationBar(
+//               type: BottomNavigationBarType.fixed,
+//               backgroundColor: Color.fromARGB(255, 193, 209, 240),
+//               iconSize: 20.0,
+//               selectedIconTheme: IconThemeData(size: 28.0),
+//               selectedItemColor: Color.fromARGB(255, 46, 90, 172),
+//               unselectedItemColor: Colors.black,
+//               selectedFontSize: 16.0,
+//               unselectedFontSize: 12,
+//               currentIndex: current_index,
+//               onTap: OnTapped,
+//               items: <BottomNavigationBarItem>[
+//                 BottomNavigationBarItem(
+//                   icon: Icon(Icons.home),
+//                   label: "Home",
+//                 ),
+//                 BottomNavigationBarItem(
+//                   icon: Icon(Icons.search),
+//                   label: "Search",
+//                 ),
+//                 BottomNavigationBarItem(
+//                   icon: Icon(Icons.settings),
+//                   label: "Settings",
+//                 ),
+//                 BottomNavigationBarItem(
+//                   icon: Icon(Icons.person),
+//                   label: "Account",
+//                 ),
+//               ]),
+//         ),
+//       ),
+
+

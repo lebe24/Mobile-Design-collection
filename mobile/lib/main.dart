@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/Home.dart';
+import 'package:mobile/src/logic/bottom_logic.dart';
 import 'package:mobile/src/logic/theme_logic.dart';
 import 'package:provider/provider.dart';
 
@@ -8,6 +9,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeProvider(ThemeData.light())),
+        ChangeNotifierProvider(create: (_) => BottomNavProvider()),
       ],
       child: MyApp(),
     ),

@@ -6,7 +6,7 @@ import 'package:mobile/src/utils/extension.dart';
 import 'package:mobile/src/utils/constant.dart';
 
 class CardBox extends StatelessWidget {
-   CardBox(
+  CardBox(
       {super.key,
       required this.size,
       required this.image,
@@ -34,11 +34,11 @@ class CardBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         child: Container(
           width: size,
-          height: size * 0.85,
+          height: size,
           decoration: const BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: Color(0x4B000000),
                 blurRadius: 40.0,
                 offset: Offset(0, 40),
               ),
@@ -138,9 +138,9 @@ Widget favIcon(bool _islove) {
 Widget contentBox(double size) {
   return Positioned(
     bottom: 0,
-    child: GlassmorphicContainer(
+     child: GlassmorphicContainer(
       width: size,
-      height: size / 3,
+      height: size / 2.2,
       borderRadius: 20,
       blur: 10,
       border: 1,
@@ -158,99 +158,121 @@ Widget contentBox(double size) {
       ),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 12.0),
-            child: const ListTile(
-              title: Text(
-                'TORONTO, CANADA',
-                style: TextStyle(
-                  fontFamily: 'SF Pro Text',
-                  fontWeight: FontWeight.w700,
-                  fontSize: 20,
-                  height: 21 / 20,
-                  letterSpacing: -0.32,
-                  color: Colors.white,
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 10.0, bottom: 0),
+              child: const ListTile(
+                title: Text(
+                  'TORONTO, CANADA',
+                  style: TextStyle(
+                    fontFamily: 'SF Pro Text',
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                    height: 21 / 20,
+                    letterSpacing: -0.32,
+                    color: Colors.white,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
               ),
             ),
           ),
-          Row(children: [
-            Expanded(
-              child: ListTile(
-                title: Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text(
-                    'Cost',
-                    style: TextStyle(
-                      letterSpacing: -0.408,
-                      color: Color.fromRGBO(255, 255, 255, 0.6),
-                      fontFamily: 'SF Pro Text',
-                      fontWeight: FontWeight.w700,
-                      fontSize: 20,
-                      height: 1.05,
+          Flexible(
+            child: Row(children: [
+              Expanded(
+                child: ListTile(
+                  title: Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      'Cost',
+                      style: TextStyle(
+                        letterSpacing: -0.408,
+                        color: Color.fromRGBO(255, 255, 255, 0.6),
+                        fontFamily: 'SF Pro Text',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        height: 1.05,
+                      ),
                     ),
                   ),
+                  subtitle: Row(
+                    children: const [
+                      Icon(
+                        Icons.map_sharp,
+                        size: 14,
+                        color: Color(0xFF37F4FA),
+                      ),
+                      SizedBox(width: 5),
+                      Text('Subtitle'),
+                    ],
+                  ),
                 ),
-                subtitle: Row(
-                  children: const [
-                    Icon(
-                      Icons.map_sharp,
-                      size: 14,
-                      color: Color(0xFF37F4FA),
+              ),
+              Location(),
+              Expanded(
+                child: ListTile(
+                  title: Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      'Cost',
+                      style: TextStyle(
+                        letterSpacing: -0.408,
+                        color: Color.fromRGBO(255, 255, 255, 0.6),
+                        fontFamily: 'SF Pro Text',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        height: 1.05,
+                      ),
                     ),
-                    SizedBox(width: 5),
-                    Text('Subtitle'),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: ListTile(
-                title: const Text(
-                  'Cost',
-                  style: TextStyle(
-                    letterSpacing: -0.408,
-                    color: Color.fromRGBO(255, 255, 255, 0.6),
-                    fontFamily: 'SF Pro Text',
-                    fontWeight: FontWeight.w700,
-                    fontSize: 15,
-                    height: 1.05,
+                  ),
+                  subtitle: Row(
+                    children: const [
+                      Icon(
+                        Icons.map_sharp,
+                        size: 14,
+                        color: Color(0xFF37F4FA),
+                      ),
+                      SizedBox(width: 5),
+                      Text('Subtitle'),
+                    ],
                   ),
                 ),
-                subtitle: Row(
-                  children: const [
-                    Icon(Icons.info),
-                    SizedBox(width: 5),
-                    Text('Subtitle'),
-                  ],
-                ),
               ),
-            ),
-            Expanded(
-              child: ListTile(
-                title: Text(
-                  'Cost',
-                  style: TextStyle(
-                    letterSpacing: -0.408,
-                    color: Color.fromRGBO(255, 255, 255, 0.6),
-                    fontFamily: 'SF Pro Text',
-                    fontWeight: FontWeight.w700,
-                    fontSize: 15,
-                    height: 1.05,
-                  ),
-                ),
-                subtitle: Row(
-                  children: [
-                    Icon(Icons.calendar_month),
-                    SizedBox(width: 5),
-                    Text('Subtitle'),
-                  ],
-                ),
-              ),
-            ),
-          ]),
+            ]),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Expanded Location() {
+  return Expanded(
+    child: ListTile(
+      title: Padding(
+        padding: const EdgeInsets.only(bottom: 8.0),
+        child: Text(
+          'Cost',
+          style: TextStyle(
+            letterSpacing: -0.408,
+            color: Color.fromRGBO(255, 255, 255, 0.6),
+            fontFamily: 'SF Pro Text',
+            fontWeight: FontWeight.w700,
+            fontSize: 20,
+            height: 1.05,
+          ),
+        ),
+      ),
+      subtitle: Row(
+        children: const [
+          Icon(
+            Icons.map_sharp,
+            size: 14,
+            color: Color(0xFF37F4FA),
+          ),
+          SizedBox(width: 5),
+          Text('Subtitle'),
         ],
       ),
     ),
