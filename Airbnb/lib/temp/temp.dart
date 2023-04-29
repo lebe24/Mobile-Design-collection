@@ -283,3 +283,36 @@ class _CustomBottomNavigationState extends State<CustomBottomNavigation> {
 //     );
 //   }
 // }
+
+
+// Container(
+//       decoration: BoxdeDecoration(
+//         border: Border.all(width: 3, color: Colors.white),
+//         borderRadius: BorderRadius.circular(50),
+//         gradient: LinearGradient(
+//           begin: Alignment.topLeft,
+//           end: Alignment.bottomRight,
+//           stops: [0.097, 0.86],
+//           colors: [
+//             Color(0xFF22283E),
+//             Color(0xFF171827),
+//           ],
+//           transform: GradientRotation(146.22),
+//         ),
+//         boxShadow: [
+//           BoxShadow(
+//             color: Color.fromRGBO(0, 0, 0, 0.2),
+//             offset: Offset(4, 4),
+//             blurRadius: 10,
+//           )
+//         ],
+//       ),
+//       child: CircleAvatar(
+//         foregroundColor: Colors.white,
+//         child: Icon(Icons.person),
+//         // add border property
+//         // set border width to 3
+//         // set border color to white
+//         // you can adjust the width and color as needed
+//       ),
+//     );

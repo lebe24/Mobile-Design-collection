@@ -17,6 +17,7 @@ class RiveIcon extends StatefulWidget {
   final String animation;
   final double height;
   final double width;
+  // late SMIBool input;
 
   @override
   State<RiveIcon> createState() => _RiveIconState();
@@ -45,6 +46,10 @@ class _RiveIconState extends State<RiveIcon> {
     setState(() => _riveArtboard = artboard!
       ..addController(_controller = SimpleAnimation(widget.animation)));
   }
+
+  // set setInput(SMIBool status) {
+  //   widget.input = status;
+  // }
 
   @override
   Widget build(BuildContext context) {
