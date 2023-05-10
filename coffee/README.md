@@ -2,8 +2,7 @@
 
 Mobile Design Collection #3.
 
-<video src="coffevideo.mp4" />
-
+![Video Title](https://raw.githubusercontent.com/lebe24/Mobile-Design-collection/a00b1d726c3338eafaae95f52214f5e894ff15b0/coffee/coffevideo.mp4)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
