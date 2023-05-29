@@ -16,4 +16,4 @@ A collection of Flutter Mobile UI and Animations Kits.
 #1
 |              Example             |             Banner           |
 | :----------------------------------: | :----------------------------------: |
-| ![Airpods Rotation](screenshots/airpods.gif) | ![Airpods Rotation](screenshots/session_006.png) |
+| ![Airpods Rotation](screenshots/airpods.gif) | ![Coffee](screenshots/session_006.png) |
