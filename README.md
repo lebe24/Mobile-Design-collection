@@ -1,6 +1,6 @@
 <div align="center"/>
  
-## Flutter Moblie Design Collection
+ ## Flutter Moblie Design Collection
 ![Mobile Collection](https://github.com/lebe24/Mobile-Design-collection/assets/31292486/afbe6e47-2698-4c61-b163-7147e4365691)
 
 </div>
@@ -23,5 +23,11 @@ A collection of Flutter Mobile UI and Animations Kits.
 https://github.com/lebe24/Mobile-Design-collection/assets/31292486/7ac0268e-855f-4dc8-8d6c-f9b0cdd7fc1c
 
 -----
+
+#2 [Flutter_chat]()
+
+https://github.com/lebe24/Mobile-Design-collection/assets/31292486/a650578d-9275-4912-933f-568e9eb5be74
+
+
 
 
