@@ -1,4 +1,9 @@
+<div align="center"/>
+ 
 ## Flutter Moblie Design Collection
+![Mobile Collection](https://github.com/lebe24/Mobile-Design-collection/assets/31292486/afbe6e47-2698-4c61-b163-7147e4365691)
+
+</div>
 
 A collection of Flutter Mobile UI and Animations Kits.
  
